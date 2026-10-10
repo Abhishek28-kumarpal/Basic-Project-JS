@@ -71,17 +71,6 @@ Add each component as you build it. Update the folder names and demo links to ma
 
 > These are suggested practice tasks. Replace each entry with your completed work. Add a live demo link when you publish a project with GitHub Pages.
 
-## 📅 Daily Practice Log
-
-Record a task after you finish it. One completed task per day is a great starting goal.
-
-| Day | Date | Task | What I Practiced | Status |
-|---:|---|---|---|---|
-| 01 | DD-MM-YYYY | Profile Card | HTML + CSS | ⬜ Planned |
-| 02 | DD-MM-YYYY | Login Form UI | Forms + CSS | ⬜ Planned |
-| 03 | DD-MM-YYYY | Digital Clock | JavaScript + DOM | ⬜ Planned |
-
-**Status key:** ⬜ Planned · 🟡 In progress · ✅ Completed
 
 ## 📁 Suggested Folder Structure
 
