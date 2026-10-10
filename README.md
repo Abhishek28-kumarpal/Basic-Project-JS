@@ -1,5 +1,3 @@
-# Basic-Project-JS
-practice projects 
 
 <div align="center">
 
