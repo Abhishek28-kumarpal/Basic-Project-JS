@@ -8,7 +8,7 @@ function App() {
 
 
 
-//  ---------------------------------------//1st function created incerease the value
+//  ----------------------------------//1st function created incerease the value
   const addValue = ()=>{
   console.log("click",counter);
   // count=count+1;
@@ -40,5 +40,4 @@ function App() {
   );
 }
 
- 
 export default App;
