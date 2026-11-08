@@ -1,0 +1,58 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(2.jpg);
+    background-repeat: no-repeat, repeat;
+    background-position-x: right;
+    background-position-y: center;
+    background-attachment: fixed;
+     
+}
+form:hover{
+    transition:ease-in-out;
+    transition-duration: 6s;
+  
+    
+}
+h1{
+    background-color: aqua;
+    box-shadow:blueviolet 2px 3px 10px;
+    
+  
+}
+input{
+    box-shadow:  blueviolet  2px 3px 4px ;
+    margin-top: 30px;
+    padding-top: 4px;
+    padding-inline-start: 4px;
+    padding-bottom: 4px;
+}
+h2{
+    text-decoration: underline;
+    color: gray;
+    
+}
+
+h2:hover{
+ color: black;
+}
+
+
+label:hover{
+    box-shadow:lightgrey 3px 4px 5px;
+    
+}
+fieldset{
+    background-image: url(2.jpg);
+    border-image-outset: 10px;
+    width: 400px;
+    margin-left: 35%;
+    height: 530px;
+    text-align: center;
+    box-shadow: 1px 10px 15px gray;
+}
+
+
