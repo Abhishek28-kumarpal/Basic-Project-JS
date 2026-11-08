@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.body{
+    /* flex-wrap: wrap; */
+    background-image: url(1.jpg);
+    
+   background-size: calc(100%)  calc(650px) ;
+  
+   background-repeat: repeat;
+  background-attachment: fixed;
+  
+    
+  
+}
+input{
+    text-align: center;
+     border-radius: 7px;
+    height: 4%;
+    margin-left: 30%;
+    
+
+}
+
+div{
+   cursor: pointer;
+    background-color: black ;
+    opacity: 0.7;
+    margin-left: 35%;
+    width: 30%;
+    height: 500px;
+    margin-top: 33px;
+    box-shadow: 3px 4px 5px ;
+    border-radius: calc( 20px );
+    
+}
+.div:hover{
+    
+    border-color: 2px 4px 2px aqua;
+   border-style: ridge;
+ 
+   
+   
+    box-shadow: 2px 3px 9px 4px gray;
+}
+
+h1{
+    text-decoration: underline;
+    text-align: center;
+    color: white;
+ 
+}
+
+
+li{
+    text-align:center;
+    margin-top: 40px ;
+    text-align: center;
+   color: white;
+    
+}
+a:hover{
+    text-shadow: 3px 4px 5px red;
+}
+a:visited{
+    text-shadow: 3px 4px 5px green;
+}
+a:active{
+    text-shadow: 3px 4px 5px blue;
+}
+
+.but{
+margin-left: 37%;
+width: 10%;
+height: 30px;
+border-radius: 4px;
+box-shadow: 2px 3px 6px gray ;
+}
+.ton{
+    margin-left: 6%;
+width: 10%;
+height: 30px;
+border-radius: 5px; 
+box-shadow: 2px 3px 6px gray ;
+}
+.but:hover{
+    cursor: pointer;
+    border-style: ridge;
+    box-shadow: 3px 4px 5px black;
+}
+.ton:hover{
+    cursor: pointer;
+    border-style: ridge;
+    box-shadow: 3px 4px 5px black;
+    
+}
+/* ------------------------------------------------------------------------- */
+
