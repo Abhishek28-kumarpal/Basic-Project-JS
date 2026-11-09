@@ -1,0 +1,27 @@
+h1
+{
+   
+    text-align: center;
+   text-shadow: blueviolet 2px 3px 4px;
+}
+::placeholder{
+    text-align: left;
+    text-shadow: 2px 3px 4px;
+
+}
+h1:nth-of-type(1){
+    font-size:50px;
+    
+}
+
+button
+{
+   
+    text-align: center;
+   text-shadow: blueviolet 2px 3px 4px;
+}
+
+
+
+
+
