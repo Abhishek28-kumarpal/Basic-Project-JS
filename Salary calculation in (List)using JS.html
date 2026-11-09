@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="icon" href="doc.jpg">
+<h1> This is the example of (.value and .innerhtml)</h1>
+<body>
+    <ul>
+        <li >Name:  <input id="naa"type="text=" value="" required> </li>  
+        <li>Designation:  <input id="poo" type="text" value="" required></li>  
+        <li>Salary:<input  id="salll" type="text" value="" required></li>
+        <li>TAXx:<input id="Taxx" type="text" value="" required></li>  
+        <li>TAX Deduction :<input id="nsal" type="text" value="" required></li> 
+        <li>Total:<input id="tol" type="text" value="" required></li> 
+    </ul>
+    
+</body>
+<script>
+    // calsal variable is calculation of salary
+    var na,po,sal,netsal,tax,total;
+    na=prompt("Enter the name");
+    po=prompt("Enter the Post");
+    sal=parseFloat(prompt("Enter the salary"));
+    tax=parseFloat(prompt("Enter the Percentage of tax"));
+    netsal=sal/100*tax;  //  Calculation formula of salary
+    total=netsal-sal;
+    document.getElementById("naa").value=na ;
+    document.getElementById("poo").value=po;
+    document.getElementById("salll").value=sal;
+    document.getElementById("Taxx").value=tax;
+    document.getElementById("nsal").value=netsal;
+    document.getElementById("tol").value=total;
+</script>
+</html>

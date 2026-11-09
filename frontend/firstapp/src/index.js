@@ -11,6 +11,5 @@ root.render(
   </React.StrictMode> 
   // or using these fragments <> between </> instead of using 
   // React.StrictMode
+  // react
 );
-
- 
