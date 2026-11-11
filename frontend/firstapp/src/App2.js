@@ -1,8 +1,8 @@
 function App2(){
 
     return(
-        <h1>second app is ready</h1>
+        <h1 className="bg-green-400" >second app is ready</h1>
     );
 }
 
-export default App2
+export default App2;
