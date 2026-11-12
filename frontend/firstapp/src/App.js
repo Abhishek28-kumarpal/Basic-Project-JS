@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import App2 from './App2';
 function App() {
 
-  let [counter, setCounter] = useState(15);
+  let [counter, setCounter]  = useState(15);
   // let count=15;
 
 //  ----------------------------------//1st function created incerease the value
@@ -32,7 +32,7 @@ function App() {
     <button onClick={removeValue}>Remove value: {counter}</button>
     <p>footer: {counter}</p>
     <App2/>
-
+  
     </>
   );
 }
