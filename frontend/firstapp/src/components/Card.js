@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card({username , myobj}){
+function Card({username = "paul" , myobj}){
   console.log(username, myobj);
   
     return(
@@ -30,7 +30,7 @@ function Card({username , myobj}){
 
       <p className="text-gray-400 text-sm leading-relaxed mb-6">
         Discover cutting-edge design {username}patterns and UI components that elevate
-        your digital experiences by 
+        your digital experiences by.
       </p>
 
       <div className="flex items-center justify-between">
@@ -50,10 +50,9 @@ function Card({username , myobj}){
         </div>
       </div>
     </div>
-        
+
 </>
     )
 }
-
 
 export default Card

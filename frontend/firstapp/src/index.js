@@ -10,9 +10,10 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+ 
   <> {/* fragements  */}
      {/* <Card/> */}
-     
+
     {/* <App2/> */}
     <App/>
   </>

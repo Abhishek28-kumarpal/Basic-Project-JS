@@ -7,7 +7,7 @@ function App() {
 //   // let count=15;
 
 let someobj={
-  username: "abhishek",
+  username:"", 
   age: 21
 }
 
