@@ -1,6 +1,8 @@
 import React from "react";
 
-function card(){
+function Card({username , myobj}){
+  console.log(username, myobj);
+  
     return(
         <>
         <div>Card</div>
@@ -19,7 +21,7 @@ function card(){
 
       <div className="mb-4">
         <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase bg-white text-black rounded-full mb-3">
-          Featured
+          {username} {myobj}
         </span>
         <h2 className="text-xl font-bold text-white mb-2 group-hover:text-gray-300 transition-colors duration-200">
           Modern Design Solutions
@@ -27,8 +29,8 @@ function card(){
       </div>
 
       <p className="text-gray-400 text-sm leading-relaxed mb-6">
-        Discover cutting-edge design patterns and UI components that elevate
-        your digital experiences.
+        Discover cutting-edge design {username}patterns and UI components that elevate
+        your digital experiences by 
       </p>
 
       <div className="flex items-center justify-between">
@@ -54,4 +56,4 @@ function card(){
 }
 
 
-export default card
+export default Card

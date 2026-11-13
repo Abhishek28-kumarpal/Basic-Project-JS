@@ -5,16 +5,17 @@ import './index.css';
 
 
 // import App2 from './App2';
-import Card from './components/Card';
-// import App from './App';
+// import Card from './components/Card';
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode> {/* fragements  */}
-     <Card/>
+  <> {/* fragements  */}
+     {/* <Card/> */}
+     
     {/* <App2/> */}
-    {/* <App/> */}
-  </React.StrictMode>
+    <App/>
+  </>
   // or using these fragments <> between </> instead of using
   // React.StrictMode
   // react
