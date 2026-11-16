@@ -39,7 +39,7 @@ let someobj={
     <p>footer: {counter}</p> */}
     {/* <App2/> */}
     <Card username ="abhishekpal" />
-    <Card myobj={someobj.age} />
+    <Card myobj={someobj.age} />  
   
     </>
   );

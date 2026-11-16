@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hotel Management System</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 20px;
+    }
+    .container {
+        width: 500px;
+        margin: 30px auto;
+        background-color: #ffffff;
+        padding: 25px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+    }
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+    label {
+        display: block;
+        margin-top: 12px;
+        font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #999;
+        border-radius: 4px;
+    }
+    .error {
+        color: red;
+        font-size: 12px;
+        height: 14px;
+    }
+    .btn {
+        padding: 10px 20px;
+        margin-top: 15px;
+        margin-right: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .btn-submit {
+        background-color: #4340a0;
+        color: white;
+    }
+    .btn-reset {
+        background-color: #3bee1b;
+        color: white;
+    }
+    .btn-login {
+        background-color: #cedeef;
+        color: white;
+        width: 100%;
+    }
+    #message {
+        text-align: center;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<!-- LOGIN FORM -->
+<div class="container">
+    <h2>Hotel Login</h2>
+    <form id="loginForm">
+        <label>Username</label>
+        <input type="text" id="username">
+        <div class="error" id="err_username"></div>
+
+        <label>Password</label>
+        <input type="text" id="password">
+        <div class="error" id="err_password"></div>
+
+        <button type="submit" class="btn btn-login">Login</button>
+    </form>
+    <div id="loginMessage"></div>
+</div>
+
+<!-- HOTEL BOOKING FORM -->
+<div class="container">
+    <h2>Hotel Booking Form</h2>
+    <form id="bookingForm">
+
+        <label>Name</label>
+        <input type="text" id="name">
+        <div class="error" id="err_name"></div>
+
+        <label>Email</label>
+        <input type="email" id="email">
+        <div class="error" id="err_email"></div>
+
+        <label>Mobile No</label>
+        <input type="tel" id="mobile" maxlength="10">
+        <div class="error" id="err_mobile"></div>
+
+        <label>Gender</label>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <input type="radio" name="gender" value="Other"> Other
+        <div class="error" id="err_gender"></div>
+
+        <label>Days for Check In</label>
+        <input type="number" id="days" min="1">
+        <div class="error" id="err_days"></div>
+
+        <label>Address</label>
+        <textarea id="address" rows="3"></textarea>
+        <div class="error" id="err_address"></div>
+
+        <label>City</label>
+        <input type="text" id="city">
+        <div class="error" id="err_city"></div>
+
+        <button type="submit" class="btn btn-submit">Submit</button>
+        <button type="reset" class="btn btn-reset">Reset</button>
+    </form>
+    <div id="message"></div>
+</div>
+
+<script>
+
+// ---------- LOGIN VALIDATION ----------
+document.getElementById("loginForm").onsubmit = function(e) {
+    e.preventDefault();
+    var valid = true;
+
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    if (username == "") {
+        document.getElementById("err_username").innerHTML = "Username is required";
+        valid = false;
+    } else {
+        document.getElementById("err_username").innerHTML = "";
+    }
+
+    if (password == "") {
+        document.getElementById("err_password").innerHTML = "Password is required";
+        valid = false;
+    } else if (password.length < 6) {
+        document.getElementById("err_password").innerHTML = "Password must be at least 6 characters";
+        valid = false;
+    } else {
+        document.getElementById("err_password").innerHTML = "";
+    }
+
+    if (valid == true) {
+        document.getElementById("loginMessage").innerHTML = "Login Successful!";
+        document.getElementById("loginMessage").style.color = "green";
+    }
+};
+
+// ---------- BOOKING FORM VALIDATION ----------
+document.getElementById("bookingForm").onsubmit = function(e) {
+    e.preventDefault();
+    var valid = true;
+
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var mobile = document.getElementById("mobile").value;
+    var days = document.getElementById("days").value;
+    var address = document.getElementById("address").value;
+    var city = document.getElementById("city").value;
+    var gender = document.querySelector('input[name="gender"]:checked');
+
+    // Name validation
+    if (name == "") {
+        document.getElementById("err_name").innerHTML = "Name is required";
+        valid = false;
+    } else {
+        document.getElementById("err_name").innerHTML = "";
+    }
+
+    // Email validation
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email == "") {
+        document.getElementById("err_email").innerHTML = "Email is required";
+        valid = false;
+    } else if (!emailPattern.test(email)) {
+        document.getElementById("err_email").innerHTML = "Enter a valid email";
+        valid = false;
+    } else {
+        document.getElementById("err_email").innerHTML = "";
+    }
+
+    // Mobile validation
+    var mobilePattern = /^[0-9]{10}$/;
+    if (mobile == "") {
+        document.getElementById("err_mobile").innerHTML = "Mobile number is required";
+        valid = false;
+    } else if (!mobilePattern.test(mobile)) {
+        document.getElementById("err_mobile").innerHTML = "Enter a valid 10-digit mobile number";
+        valid = false;
+    } else {
+        document.getElementById("err_mobile").innerHTML = "";
+    }
+
+    // Gender validation
+    if (gender == null) {
+        document.getElementById("err_gender").innerHTML = "Select a gender";
+        valid = false;
+    } else {
+        document.getElementById("err_gender").innerHTML = "";
+    }
+
+    // Days validation
+    if (days == "" || days <= 0) {
+        document.getElementById("err_days").innerHTML = "Enter valid number of days";
+        valid = false;
+    } else {
+        document.getElementById("err_days").innerHTML = "";
+    }
+
+    // Address validation
+    if (address == "") {
+        document.getElementById("err_address").innerHTML = "Address is required";
+        valid = false;
+    } else {
+        document.getElementById("err_address").innerHTML = "";
+    }
+
+    // City validation
+    if (city == "") {
+        document.getElementById("err_city").innerHTML = "City is required";
+        valid = false;
+    } else {
+        document.getElementById("err_city").innerHTML = "";
+    }
+
+    if (valid == true) {
+        document.getElementById("message").innerHTML = "Booking Successful for " + name + "!";
+        document.getElementById("message").style.color = "green";
+    } else {
+        document.getElementById("message").innerHTML = "Please fill all fields correctly.";
+        document.getElementById("message").style.color = "red";
+    }
+};
+
+</script>
+
+</body>
+</html>
