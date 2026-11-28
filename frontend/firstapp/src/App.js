@@ -44,5 +44,4 @@ let someobj={
     </>
   );
 }
-
 export default App;
